@@ -4,7 +4,7 @@
  203040047
  https://github.com/LeniSetiarini09/pw2021_203040047
  Pertemuan 6 (12 Maret 2021)
- Latihan 1
+ latihan 2
  Mempelajari tentang Associative Array pada PHP
  */
  ?>
