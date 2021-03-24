@@ -12,6 +12,7 @@ $makeup = [
         "Name" => "Mascara",
         "Brand" => "Maybelline",
         "Benefits"=> "Agar bulu mata terlihat lebih tebal, lentik dan panjang. Sehingga akan tampak lebih indah",
+        "Price" => "Rp. 50.000",
     ],
     [
         "No" => "2",
@@ -19,6 +20,7 @@ $makeup = [
         "Name" => "Eye Shadow",
         "Brand" => "Inez",
         "Benefits"=> "Sebagai pengindah pada kelopak mata",
+        "Price" => "Rp. 35.000",
     ],
     [
         "No" => "3",
@@ -26,6 +28,7 @@ $makeup = [
         "Name" => "Pensil Alis",
         "Brand" => "Viva",
         "Benefits"=> "Mempertebal alis dan merapihkan alis",
+        "Price" => "Rp. 30.000",
     ],
     [
         "No" => "4",
@@ -33,13 +36,15 @@ $makeup = [
         "Name" => "Blush On",
         "Brand" => "Emina",
         "Benefits"=> "Untuk memerahkan pipi sehingga memberikan penampilan yang lebih menarik",
+        "Price" => "Rp. 28.000",
     ],
     [
         "No" => "5",
         "Picture" => "lipstik.jpg",
         "Name" => "Lipstik",
         "Brand" => "Purbasari",
-        "Benefits"=> "Melembabkan dan melindungi bibir dari paparan sinar matahari, selain itu liptik juga bisa membuat bibir menjadi lebih terlihat berwarna",
+        "Benefits"=> "Melembabkan dan melindungi bibir dari paparan sinar matahari, selain itu lipstik juga bisa membuat bibir menjadi lebih terlihat berwarna",
+        "Price" => "Rp. 30.000",
     ],
     [
         "No" => "6",
@@ -47,6 +52,7 @@ $makeup = [
         "Name" => "Eye liner",
         "Brand" => "Mizzu",
         "Benefits"=> "Untuk mempertegas garis pada mata, tampilan mata pun menjadi lebih menarik",
+        "Price" => "Rp. 50.000",
     ],
     [
         "No" => "7",
@@ -54,6 +60,7 @@ $makeup = [
         "Name" => "Concealer",
         "Brand" => "Make over",
         "Benefits"=> "Untuk menutupi noda seperti bekas jerawat pada wajah",
+        "Price" => "Rp. 100.000",
     ],
     [
         "No" => "8",
@@ -61,6 +68,7 @@ $makeup = [
         "Name" => "Foundation",
         "Brand" => "Revlon",
         "Benefits"=> "Sebagai alas pada make up yang berfungsi untuk meratakan kulit pada wajah",
+        "Price" => "Rp. 145.000",
     ],
     [
         "No" => "9",
@@ -68,6 +76,7 @@ $makeup = [
         "Name" => "Bedak",
         "Brand" => "Focallure Face",
         "Benefits"=> "Membuat wajah menjadi lebih bersinar, kulit wajah terlihat lebih lembut dan terlihat lebih cerah",
+        "Price" => "Rp. 30.000",
     ],
     [
         "No" => "10",
@@ -75,6 +84,7 @@ $makeup = [
         "Name" => "Primer",
         "Brand" => "Pixy",
         "Benefits"=> "Membantu melembapkan kulit sekaligus membuat hasil make up menjadi sempurna dan tahan lama",
+        "Price" => "Rp. 45.000",
     ],
 ];
 ?>
