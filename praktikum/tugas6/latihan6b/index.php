@@ -14,23 +14,25 @@ $makeup = query("SELECT * FROM make_up");
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Metro 4 -->
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-  </head>
-  <body>
-  
+</head>
+
+<body>
+
     <div class="container">
-    <h2>Brands Make Up</h2>
-    <a href="../latihan5b/php/tambah.php">Tambah Data</a>
-    <a href="php/login.php">
-        <button type="">Masuk ke halaman admin</button>
-    </a>
-    <br><br>
+        <h2>Brands Make Up</h2>
+        <a href="../latihan5b/php/tambah.php">Tambah Data</a>
+        <a href="php/login.php">
+            <button type="">Masuk ke halaman admin</button>
+        </a>
+        <br><br>
         <table class="table table-border cell-border">
             <thead>
                 <tr>
@@ -43,23 +45,24 @@ $makeup = query("SELECT * FROM make_up");
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($makeup as $mp) : ?>
+                <?php foreach ($makeup as $mp) : ?>
                     <tr>
                         <td><?= $mp["id"]; ?></td>
-                        <td><img src="../latihan6a/assets/img/<?= $mp["Picture"]; ?>" ></td>
+                        <td><img src="../latihan6a/assets/img/<?= $mp["Picture"]; ?>"></td>
                         <td><?= $mp["Name"]; ?></td>
                         <td><?= $mp["Brand"]; ?></td>
                         <td><?= $mp["Benefits"]; ?></td>
                         <td class="alert"><?= $mp["Price"]; ?></td>
-                        <td><a href="../latihan5d/php/detail.php?id=<?= $mp["id"];?>">detail</a></td>
+                        <td><a href="../latihan5d/php/detail.php?id=<?= $mp["id"]; ?>">detail</a></td>
                     </tr>
-                <?php endforeach ; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-</table>
+    </table>
 
     <!-- Metro 4 -->
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-  </body>
+</body>
+
 </html>
