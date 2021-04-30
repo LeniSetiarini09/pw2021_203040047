@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Apr 2021 pada 05.37
+-- Waktu pembuatan: 29 Apr 2021 pada 14.20
 -- Versi server: 10.4.16-MariaDB
 -- Versi PHP: 7.4.12
 
@@ -24,43 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `judul buku`
+-- Struktur dari tabel `mahasiswa`
 --
 
-CREATE TABLE `judul buku` (
-  `id` int(11) NOT NULL,
-  `judul buku` varchar(100) NOT NULL,
-  `pengarang` varchar(100) NOT NULL,
-  `penerbit` varchar(100) NOT NULL,
-  `tebal buku` varchar(100) NOT NULL,
-  `buku terbit` varchar(100) NOT NULL,
-  `gambar` varchar(100) NOT NULL
+CREATE TABLE `mahasiswa` (
+  `id` int(50) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `nrp` char(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `jurusan` varchar(255) NOT NULL,
+  `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `judul buku`
+-- Dumping data untuk tabel `mahasiswa`
 --
 
-INSERT INTO `judul buku` (`id`, `judul buku`, `pengarang`, `penerbit`, `tebal buku`, `buku terbit`, `gambar`) VALUES
-(1, 'bulan', 'tere liye', 'gramedia pustaka utama(jakarta)', '440 halaman', '16 januari 2015', 'bulan.jpg'),
-(2, 'milea suara dari dilan', 'pidi baiq', 'pastel books', '360 halaman', '2016', 'milea.jpg'),
-(3, 'dear nathan', 'erischa febriani', 'best media', '528 halaman', '2016', 'dear nathan.jpg'),
-(4, 'dilan', 'pidi baiq', 'pastel books', '333 halaman', '2014', 'dilan.jpg'),
-(5, 'hujan', 'tere liye', 'gramedia pustaka utama', '320 halaman', 'januari 2016', 'hujan.jpg'),
-(6, 'laskar pelangi', 'andrea hirata', 'bentang pustaka', '529 halaman', '2005', 'laskar-pelangi.jpg'),
-(7, 'matahari', 'tere liye', 'gramedia pustaka utama', '404 halaman', 'juli 2016', 'matahari.jpg'),
-(8, 'rindu', 'tere liye', 'republika penerbit', '544 halaman', 'oktober 2014', 'rindu.jpg'),
-(9, 'sang pemimpi', 'andrea hirata', 'bentang pustaka', '292 halaman', 'juli 2006', 'sang pemimpi.jpg'),
-(10, 'sepatu tua', 'sapardi djoko damono', 'gramedia pustaka utama', '114 halaman', '2019', 'sepatu tua.jpg');
+INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALUES
+(1, 'Leni Setiarini', '203040047', 'setiarini.leni@gmail.com', 'Teknik Informatika', 'leni.jpg'),
+(2, 'Anne Imaniar', '203020050', 'imaniar.anne@gmail.com', 'Teknik Pangan', 'anne.jpg'),
+(3, 'Chyntia Putri', '203040002', 'chyntia.putri@gmail.com', 'Teknik Informatika', 'chyntia.jpg'),
+(4, 'Devi Indriawati', '203010024', 'devi.indriawati@gmail.com', 'Teknik Lingkungan', 'devi.jpg\r\n'),
+(5, 'Elsa Fadila', '203030065', 'elsa.fadila@gmail.com', 'Perancangan Wilayah dan Kota', 'elsa.jpg'),
+(6, 'Diyang Wulandari', '203020043', 'diyang.wulandari@gmail.com', 'Teknik Pangan', 'diyang.jpg'),
+(7, 'Karina Hamidah', '203010020', 'karina.hamidah@gmail.com', 'Teknik Lingkungan', 'karina.jpg'),
+(8, 'Listya Meriandini', '203030076', 'listya.meriandini@gmail.com', 'Perancangan Wilayah dan Kota', 'listya.jpg'),
+(9, 'Naisya Nurul', '203040014', 'naisya.nurul@gmail.com', 'Teknik Informatika', 'naisya.jpg'),
+(10, 'Siti Nursyahbani', '203020012', 'siti.nursyahbani@gmail.com', 'Teknik Pangan', 'siti.jpg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `judul buku`
+-- Indeks untuk tabel `mahasiswa`
 --
-ALTER TABLE `judul buku`
+ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -68,10 +67,10 @@ ALTER TABLE `judul buku`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `judul buku`
+-- AUTO_INCREMENT untuk tabel `mahasiswa`
 --
-ALTER TABLE `judul buku`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `mahasiswa`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
