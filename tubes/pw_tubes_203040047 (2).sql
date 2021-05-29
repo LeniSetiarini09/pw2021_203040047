@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Apr 2021 pada 00.36
+-- Waktu pembuatan: 29 Bulan Mei 2021 pada 06.26
 -- Versi server: 10.4.16-MariaDB
 -- Versi PHP: 7.4.12
 
@@ -52,6 +52,28 @@ INSERT INTO `make_up` (`id`, `Picture`, `Name`, `Brand`, `Benefits`, `Price`) VA
 (9, 'primer.jpg', 'Primer', 'Pixy', 'Membantu melembapkan kulit sekaligus membuat hasil make up menjadi sempurna dan tahan lama', 'Rp. 45.000'),
 (10, 'blush-on.jpg', 'Blush On', 'Emina', 'Untuk memerahkan pipi sehingga memberikan penampilan yang lebih menarik', 'Rp.  28000');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(64) NOT NULL,
+  `password` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'leni setiarini', '12345678'),
+(2, 'leni setiarini', '$2y$10$dn1fEhSGtSZZGD3WpJAq3euOwMmD1qToEuvZedsrtVtAIx7dt5nOK'),
+(3, 'leni', '$2y$10$I9t1n9V19H6FH36tvWpFFeu0CWYZCrnH6ONEmtHZseleLhavQXS52'),
+(4, 'mala', '$2y$10$Gnx67Gw2rVdIwMjeS2GFfOoOvBjLF/jle/QfpwTVWdR03BN.vRW1K');
+
 --
 -- Indexes for dumped tables
 --
@@ -63,6 +85,12 @@ ALTER TABLE `make_up`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -71,6 +99,12 @@ ALTER TABLE `make_up`
 --
 ALTER TABLE `make_up`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT untuk tabel `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
