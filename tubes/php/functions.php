@@ -21,14 +21,14 @@ function query($sql)
     $conn = koneksi();
     $result = mysqli_query($conn, "$sql");
     $rows = [];
-    while ( $row = mysqli_fetch_assoc($result)) {
-        $rows [] = $row;
+    while ($row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
     }
     return $rows;
 }
 
 // fungsi untuk menambahkan data didalam database
-function tambah($data) 
+function tambah($data)
 {
     $conn = koneksi();
 
@@ -82,26 +82,27 @@ function ubah($data)
     return mysqli_affected_rows($conn);
 }
 
-function cari($keyword) {
+function cari($keyword)
+{
     $query = "SELECT * FROM make_up WHERE 
             name LIKE '%$keyword%' OR 
             brand LIKE '%$keyword%' OR 
             benefits LIKE '%$keyword%' OR 
             price LIKE '%$keyword%' 
             ";
-        return query($query);
+    return query($query);
 }
 
-function registrasi($data) 
+function registrasi($data)
 {
     $conn = koneksi();
     $username = strtolower(stripcslashes($data["username"]));
     $password = mysqli_real_escape_string($conn, $data["password"]);
     $password2 = mysqli_real_escape_string($conn, $data["password2"]);
-    
+
     // cek username sudah ada atau belum
     mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
-    if (mysqli_fetch_assoc($result) ) {
+    if (mysqli_fetch_assoc($result)) {
         echo "<script>
                 aleert('username sudah terdaftar!'
             </script>";
@@ -117,16 +118,15 @@ function registrasi($data)
             </script>";
         return false;
     }
-        //return1;
+    //return1;
 
-        // enskripsi password
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        
+    // enskripsi password
+    $password = password_hash($password, PASSWORD_DEFAULT);
 
-        // tambahkan userbaru ke database
-        mysqli_query($conn, "INSERT INTO user VALUES('', '$username', '$password')");
 
-        return mysqli_affected_rows($conn);
+    // tambahkan userbaru ke database
+    mysqli_query($conn, "INSERT INTO user VALUES('', '$username', '$password')");
 
+    return mysqli_affected_rows($conn);
 }
 ?>
