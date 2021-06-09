@@ -53,7 +53,7 @@
   <div id="home" class="slider scrollspy">
     <ul class="slides">
       <li>
-        <img src="../assets/img/makeup.jpg"> <!-- random image -->
+        <img src="../tubes/assets/img/makeup.jpg"> <!-- random image -->
         <div class="caption center-align">
           <h1 class="black-text"><b>HALLO!</b></h1>
           <h3 class="darken black-text text-darken-3">SELAMAT DATANG</h3>
