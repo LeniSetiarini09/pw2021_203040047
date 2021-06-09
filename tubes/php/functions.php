@@ -40,7 +40,7 @@ function tambah($data)
 
     $query = "INSERT INTO make_up
                     VALUES
-                    ('', '$Picture', '$Name', '$Brand', '$Benefits', '$Price')";
+                    ('', '$picture', '$name', '$brand', '$benefits', '$price')";
 
     mysqli_query($conn, $query);
 
@@ -101,7 +101,7 @@ function registrasi($data)
     $password2 = mysqli_real_escape_string($conn, $data["password2"]);
 
     // cek username sudah ada atau belum
-    mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
+    $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
     if (mysqli_fetch_assoc($result)) {
         echo "<script>
                 aleert('username sudah terdaftar!'
